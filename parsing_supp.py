@@ -69,8 +69,28 @@ while True:
     if "uap" in fileDir.lower():
         print("+-----------------------------------------+")
         parse_uap()
+        next_step = str(input("Press enter to continue or type exit to leave. "))
+        if "exit" in next_step:
+            print("Thank you for using this utility!")
+            break
+        else:
+            pass
     elif "usw" in fileDir.lower():
         print("+-----------------------------------------+")
         parse_usw()
+        next_step = str(input("Press enter to continue or type exit to leave. "))
+        if "exit" in next_step:
+            print("Thank you for using this utility!")
+            break
+        else:
+            pass
     else:
         print("Please choose a USW or UAP directory at this time.")
+#print("Which device type would you like to parse?")
+#print("UAP | USW | USG")
+#deviceParse = str(input("Your selection: ")).upper().strip()
+#print("+-----------------------------------------+")
+#if deviceParse == "USW":
+#    parse_usw()
+#if deviceParse == "UAP":
+#    parse_uap()
