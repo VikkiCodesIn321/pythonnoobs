@@ -1,2 +1,4 @@
 # pythonnoobs
-This is some work we have while learning python. 
+Mainly consists of basic scripts while learning python.
+
+It would consist of mostly queries against files or network devices. 
