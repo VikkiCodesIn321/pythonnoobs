@@ -1,59 +1,3 @@
-'''
-def vol(rad):
-    return 4/3*3.14*rad**3
-
-print(vol(2))
-
-
-
-def ran_check(num,low,high):
-    if num < high and num > low:
-        return f'{num} is in the range between {low} and {high}'
-print(ran_check(3,2,7))
-
-def ran_bool(num,low,high):
-    return num < high and num > low
-print(ran_bool(3,1,10))
-
-def up_low(s):
-    uppercase = []
-    lowercase = []
-    for letter in s:
-        if letter.isupper():
-            uppercase.append(letter)
-        elif letter.islower():
-             lowercase.append(letter)
-    print(f'No. of Upper case characters {len(uppercase)}')
-    print(f'No. of Lower case characters: {len(lowercase)}')
-
-s = 'Hello Mr. Rogers, how are you this fine Tuesday?'
-print(up_low(s))
-
-
-def unique_list(lst):
-    return list(set(lst))
-print(unique_list([1,1,1,1,2,2,3,'a','a',3,3,3,4,5]))
-
-
-def multiply(numbers):
-    allnums = 1
-    for num in numbers:
-        allnums *= num
-    print(allnums)
-
-print(multiply([1,2,3,-4]))
-
-
-def palindrome(s):
-    print (s[::1])
-    if s[::-1] == s[::1]:
-        return True
-    else:
-        return False
-
-print(palindrome('ahelleh'))
-'''
-
 def display_board(board):
     print(f'{board[1]} | {board[2]} | {board[3]}')
     print('-- --- --')
@@ -173,3 +117,4 @@ while game_initiate:
             choose_first = True
     if not replay():
         game_initiate = False
+print("Thanks for playing!")
