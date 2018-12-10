@@ -4,15 +4,8 @@ import glob
 from pathlib import Path
 import re
 
-#text = input("What text do you want to search for? ")
-#file = input("Enter filename: ")
-#fileDir = "/Users/adam.dipple/Downloads/mine/devices/usw"
 fileDir = str(input("Which directory should this be scanning? ")).strip()
-#print(allFiles)
-#def removePunc(text):
-    #chars = "\\`*_{}[]()>#+-.!$:"
-    #for c in chars:
-        #text = text.replace(c, "\\" + c)
+
 #Start functions::
 def parse_usw():
     '''Main function for USW'''
