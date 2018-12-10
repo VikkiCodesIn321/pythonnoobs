@@ -1,8 +1,5 @@
-import os
-import string
 import glob
 from pathlib import Path
-import re
 
 #Start functions::
 def parse_usw():
@@ -28,6 +25,9 @@ def parse_usw():
                 if 'devextip' in line:
                     replacedLine = line.replace("devextip", "").replace('"', "").replace(":", "").replace(",", "").replace("_", "").strip()
                     print("Switch IP: " + str(replacedLine))
+                if 'devsiteid' in line:
+                    replacedLine = line.replace("devsiteid", "").replace('"', "").replace(":", "").replace(",", "").replace("_", "").strip()
+                    print("Site ID: " + str(replacedLine[0:-5]))
                 if 'discarding' in line:
                     #replacedLine = line.replace("discarding", "").replace('"', "").replace(":", "").replace(",", "").replace("_", "").strip()
                     dis_port_count += 1
@@ -54,6 +54,9 @@ def parse_uap():
                 if '"_mac" :' in line:
                     replacedLine = line.replace('"_mac" :', "").replace('"', "").replace(":", "").replace(",", "").replace("-", ":").strip()
                     print("MAC Address: " + replacedLine)
+                if 'devsiteid' in line:
+                    replacedLine = line.replace("devsiteid", "").replace('"', "").replace(":", "").replace(",", "").replace("_", "").strip()
+                    print("Site ID: " + str(replacedLine))
                 if 'devextip' in line:
                     replacedLine = line.replace("devextip", "").replace('"', "").replace(":", "").replace(",", "").replace("_", "").strip()
                     print("Access Point IP: " + str(replacedLine))
@@ -86,11 +89,3 @@ while True:
             pass
     else:
         print("Please choose a USW or UAP directory at this time.")
-#print("Which device type would you like to parse?")
-#print("UAP | USW | USG")
-#deviceParse = str(input("Your selection: ")).upper().strip()
-#print("+-----------------------------------------+")
-#if deviceParse == "USW":
-#    parse_usw()
-#if deviceParse == "UAP":
-#    parse_uap()
